@@ -1,24 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Train Scheduler</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link>
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </link>
+    <link rel="stylesheet" href="assets/css/style.css">
+    </link>
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
 
 </head>
+
 <body>
 
     <!-- Pseudo code -->
     <!-- -Create HTML components. Create train schedule holder and create input to add train with all necessary information -->
     <!-- Create firebase that holds train infomration ensuring that the data is being held -->
-<!-- Use moment JS to convert the time using frequenc and next arrival to minutes away using the right formula/code set up to calculate -->
+    <!-- Use moment JS to convert the time using frequenc and next arrival to minutes away using the right formula/code set up to calculate -->
 
-<!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <table class="table">
+        <thead>
+            <h4>Current Train Schedule</h4>
+            <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
 
- <!-- JavaScript    -->
- <script src="assets/JavaScript/TrainScheduler-.js"></script>
+        </tbody>
+    </table>
+
+
+
+    <form>
+        <h4>Add Train</h4>
+        <div class="form-group">
+            <label>Train Name</label>
+            <input id="train-name" type="name" class="form-control">
+
+            <!-- <small id="emailHelp" class="form-text text-muted"></small> -->
+        </div>
+        <div class="form-group">
+            <label>Destination</label>
+            <input id="destination" type="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>First Train Time (HH:MM - military time)</label>
+            <input id="first-train" type="time" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Frequency (min)</label>
+            <input id="frequency" type="time" class="form-control">
+        </div>
+        <button id="tSubmit">Submit</button>
+    </form>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- JavaScript    -->
+    <script src="assets/JavaScript/TrainScheduler-.js"></script>
 </body>
+
 </html>
