@@ -11,7 +11,7 @@
     </link>
     <!-- Firebase References -->
     <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
 </head>
 
 <body>
@@ -20,10 +20,9 @@
     <!-- -Create HTML components. Create train schedule holder and create input to add train with all necessary information -->
     <!-- Create firebase that holds train infomration ensuring that the data is being held -->
     <!-- Use moment JS to convert the time using frequenc and next arrival to minutes away using the right formula/code set up to calculate -->
-
-    <table class="table">
+    <h4>Current Train Schedule</h4>
+    <table class="table" id="train-table">
         <thead>
-            <h4>Current Train Schedule</h4>
             <tr>
                 <th scope="col">Train Name</th>
                 <th scope="col">Destination</th>
@@ -39,29 +38,14 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+
             </tr>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+
 
         </tbody>
     </table>
 
-
+    <br>
 
     <form>
         <h4>Add Train</h4>
@@ -77,18 +61,19 @@
         </div>
         <div class="form-group">
             <label>First Train Time (HH:MM - military time)</label>
-            <input id="first-train" type="time" class="form-control">
+            <input id="first-train" type="start-time" class="form-control" placeholder="Enter time">
         </div>
         <div class="form-group">
             <label>Frequency (min)</label>
-            <input id="frequency" type="time" class="form-control">
+            <input id="frequency" type="frequency" class="form-control" placeholder="Enter frequency">
         </div>
         <button id="tSubmit">Submit</button>
     </form>
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <!-- Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!-- JavaScript    -->
     <script src="assets/JavaScript/TrainScheduler-.js"></script>
 </body>
